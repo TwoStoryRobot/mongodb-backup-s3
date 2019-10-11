@@ -32,6 +32,7 @@ docker run -d \
 Add to a docker-compose.yml to enhance your robotic army:
 
 For automated backups
+
 ```
 mongodbbackup:
   image: 'halvves/mongodb-backup-s3:latest'
@@ -46,6 +47,7 @@ mongodbbackup:
 ```
 
 Or use `INIT_RESTORE` with `DISABLE_CRON` for seeding/restoring/starting a db (great for a fresh instance or a dev machine)
+
 ```
 mongodbbackup:
   image: 'halvves/mongodb-backup-s3:latest'
@@ -97,6 +99,7 @@ mongodbbackup:
 ## Restore from a backup
 
 To see the list of backups, you can run:
+
 ```
 docker exec mongodb-backup-s3 /listbackups.sh
 ```
@@ -108,10 +111,11 @@ docker exec mongodb-backup-s3 /restore.sh 20170406T155812
 ```
 
 To restore latest just:
+
 ```
 docker exec mongodb-backup-s3 /restore.sh
 ```
 
 ## Acknowledgements
 
-  * forked from [futurist](https://github.com/futurist)'s fork of [tutumcloud/mongodb-backup](https://github.com/tutumcloud/mongodb-backup)
+- forked from [futurist](https://github.com/futurist)'s fork of [tutumcloud/mongodb-backup](https://github.com/tutumcloud/mongodb-backup)
